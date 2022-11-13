@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Indirect Recurssion</title>
+    <script>
+        let money=100;
+        let totalapple=0;
+        function buyapple(x){
+            if(x>0){
+                console.log("i have" ,x, "Rs", totalapple);
+                buymore(x);
+            }else{
+                console.log("i dont have more money",totalapple);
+            }
+        }
+        function buymore(x){
+            totalapple++;
+            buyapple(x-10);
+        }
+        buyapple(money);
+    </script>
+</head>
+<body>
+    <h1>Indirect Recurssion</h1>
+</body>
+</html>

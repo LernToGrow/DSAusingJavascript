@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Max Occuring element</title>
+    <script>
+        let str="hello";
+        let strObj={};
+        let maxkey='';
+        for(let i=0;i<str.length;i++){
+            let key=str[i];
+            if(!strObj[key]){
+                strObj[key]=0;
+            }
+            strObj[key]++;
+            if(maxkey == "" || strObj[key]>strObj[maxkey]){
+                maxkey=key;
+            }
+        }
+        console.log(maxkey);
+        console.log(strObj);
+    </script>
+</head>
+<body>
+    <h1>Max Occuring element</h1>
+</body>
+</html>

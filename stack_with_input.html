@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stack With Input Button</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let maxValue = 5;
+        function push() {
+            let newValue=document.getElementById("inputvalue").value; 
+            if (currentSize >= maxValue) {
+                alert("stack is full you can not add" + newValue);
+                
+            }else{
+            data[currentSize] = newValue;
+            currentSize += 1;
+            }
+            display();
+        }
+
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                data.length = currentSize;
+            } else {
+                alert("stack is all ready empty");
+            }
+            display();
+        }
+
+        function display(){
+            for(let i=0;i<=currentSize-1;i++){
+               console.log(data[i]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Stack With Input Button</h1>
+    <input type="text" placeholder="enter value" id="inputvalue">
+    <button onclick="push()">push</button>
+    <button onclick="pop()">pop</button>
+    <button onclick="display()">Display</button>
+</body>
+
+</html>

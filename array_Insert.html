@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Insert</title>
+    <script>
+        //using normal way
+        //  let data = [6,7,3,4,9];
+        // let newel=8;
+        // let position=2;
+        //      document.write(`${data} <br/>`)
+        // for(let i=data.length-1;i>=0;i--){
+        //     //  document.write(`${data[i]} <br/>`)
+        //     if(i>=position){
+        //         data[i+1]=data[i];
+        //         if(i==position){
+        //             data[i]=newel;
+        //         }
+        //     }
+        // }
+        //      document.write(`${data} <br/>`)
+        // document.write(`${data} <br/>`)
+        // taking input from user 
+        // function insertEl() {
+        //     let data = [6, 7, 3, 4, 9];
+        //     let newel = document.getElementById("element").value;
+        //     let position = document.getElementById("position").value;
+        //     document.write(`${data} <br/>`)
+        //     for (let i = data.length - 1; i >= 0; i--) {
+        //         //  document.write(`${data[i]} <br/>`)
+        //         if (i >= position) {
+        //             data[i + 1] = data[i];
+        //             if (i == position) {
+        //                 data[i] = newel;
+        //             }
+        //         }
+        //     }
+        //     document.write(`${data} <br/>`) 
+        // }
+       //using system function
+       
+       let items=[20,11,22,33,44,55];
+       document.write(items);
+       items.splice(1,0,66);
+       document.write(items);
+    </script>
+</head>
+
+<body>
+    <h1>Array Insert</h1>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="element" placeholder="enter element" />
+    <button onclick="insertEl()">Insert</button>
+</body>
+
+</html>

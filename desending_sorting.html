@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Desending Sorting</title>
+    <script>
+        let items = [20, 12, 53, 3];
+        function selectionSort(data) {
+            let minId;
+            for (let i = data.length-1;i>=0; i--) {
+                minId = i;
+                for (let j = i - 1; j >=0; j--) {
+                    if (data[j] < data[minId]) {
+                        minId = j;
+                    }
+                }
+                let temp = data[minId];
+                data[minId] = data[i];
+                data[i] = temp;
+            }
+        }
+        // function selectionSort(data) {
+        //     let minId;
+        //     for (let i = data.length-1;i>=0; i--) {
+        //         minId = i;
+        //         for (let j = i - 1; j >=0; j--) {
+        //             if (data[j] > data[minId]) {
+        //                 minId = j;
+        //             }
+        //         }
+        //         let temp = data[minId];
+        //         data[minId] = data[i];
+        //         data[i] = temp;
+        //     }
+        // }
+        selectionSort(items);
+        console.log(items);
+    </script>
+</head>
+
+<body>
+    <h1>Desending Sorting</h1>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Array Search</title>
+    <script>
+        // let data=[9,8,7,1,2,3,6,5,4]
+        // let search=4;
+        // for(let i=0;i<data.length;i++){
+        //     if(data[i]==search){
+        //         alert(`find at position ${i} element is ${data[i]}`)
+        //     }
+        // }
+        // alert(data.indexOf(search))
+        // data.splice(2,1)
+        // alert(data);
+        function searchelement() {
+            let data = [9, 8, 7, 1, 2, 3, 6, 5, 4]
+            let search = document.getElementById("serchel").value;
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] == search) {
+                    alert(`find at position ${i} element is ${data[i]}`)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Array Search</h1>
+    <input type="text" id="serchel" placeholder="enter element to search" />
+    <button onclick="searchelement()">search</button>
+</body>
+
+</html>
